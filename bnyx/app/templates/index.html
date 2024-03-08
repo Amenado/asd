@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning</title>
+</head>
+<body>
+    <h1>KALP HASTALIĞI TAHMİN SİSTEMİ</h1>
+        <h2>HOŞGELDİNİZ!</h2>
+        <p>
+
+Kalp sağlığınız hakkında daha fazla bilgi edinmek ister misiniz? Hemen aşağıdaki testi tamamlayarak kalp hastalığı riskinizi öğrenin.
+        </p>
+
+
+    <form action="/predict" method=["GET","POST"]>
+        <label for="yas">Yaşınızı giriniz :</label>
+        <input type="text" name="yas" id="yas" >
+        <br>
+        <label for="cinsiyet">Cinsiyetinizi giriniz (1 = erkek; 0 = kadın) :</label>
+        <input type="text" name="cinsiyet" id="cinsiyet" >
+        <br>
+        <label for="Kolestrol">Kolestrol değerinizi giriniz :</label>
+        <input type="text" name="kolestrol" id="kolestrol" >
+        <br>
+        <label for="thalachh">Thalach değerinizi giriniz (Kişinin ulaştığı maksimum kalp atış hızı.):
+        </label>
+        <input type="text" name="thalachh" id="thalachh" >
+        <br>
+        <label for="kanBasinci">Kan basıncınızı giriniz :</label>
+        <input type="text" name=kanBasinci id="kanBasinci" >
+        <br>
+        <label for="kanSekeri">Kan şekerinizi giriniz :</label>
+        <input type="text" name="kanSekeri" id="kanSekeri" >
+        <br>
+        <label for="agriTipi">Göğüs ağrı tipinizi giriniz :</label>
+        <input type="text" name="agriTipi" id="agriTipi" >
+        <br>
+        <label for="angina">Angina değerinizi giriniz :</label>
+        <input type="text" name="angina" id="angina" >
+        <br>
+        <label for="eskiSt">Dinlenme durumundaki ST değerinizi giriniz :</label>
+        <input type="text" name="eskiSt" id="eskiSt" >
+        <br>
+        <label for="yeniSt">Egzersiz sonrası ST değerinizi giriniz :</label>
+        <input type="text" name="yeniSt" id="yeniSt" >
+        <br>
+        <label for="florosopi">Florosopi ile renklendirilmiş ana damar sayınızı giriniz :</label>
+        <input type="text" name="florosopi" id="florosopi" >
+        <br>
+        <label for="ekg">Dinlenme durumundaki ekg değerinizi giriniz :</label>
+        <input type="text" name="ekg" id="ekg" >
+        <br>
+        <label for="thal">Talasemi değerinizi giriniz (3=normal, 6=düzelmiş kusur, 9=düzeltilebilir kusur) :</label>
+        <input type="text" name="thal" id="thal" >
+        <br>
+        <br>
+        <button type="submit">Tahmin</button>
+
+    </form>
+
+    <h2> {{prediction_text}}</h2>
+</body>
+</html>
